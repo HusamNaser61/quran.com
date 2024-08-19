@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import Verse from "./Verse"
-//  import Verse from 'husam_naser/build/';
+// import Verse from "./Verse"
+import Verse from 'husam_naser2/src/Verse';
 function App() {
   const [pages, setPages] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
