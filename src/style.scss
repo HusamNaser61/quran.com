@@ -1,0 +1,258 @@
+// The proportion between what the design had and I did
+$proportion-factor: 0.5;
+
+// Colors
+$brand-primary: #2CA4AB;
+$brand-primary-darker-5: darken($brand-primary, 5%);
+$brand-primary-darker-10: darken($brand-primary, 10%);
+$brand-primary-darker-15: darken($brand-primary, 15%);
+$brand-primary-darker-35: darken($brand-primary, 35%);
+$light-green: $brand-primary;
+
+$beige: #F1ECD8;
+$cream: #c4bda1;
+$olive: #635e49;
+
+
+$peach: #e29467;
+
+$brand-info: #c4beb0;
+
+// Tooltip bootstrap changes
+$tooltip-color: #fff;
+$tooltip-bg: $brand-primary;
+$tooltip-opacity: 1;
+$tooltip-max-width: 400px;
+
+$text-muted: #d1d0d0;
+$text-color: #939598;
+
+$navbar-height: 50px;
+$navbar-margin-bottom: 0px;
+$navbar-default-bg: #fff;
+$navbar-default-link-active-bg: transparent;
+$navbar-default-link-active-color: $brand-primary;
+$navbar-default-border: rgba(0,0,0,0.12);
+
+$navbar-inverse-bg: $brand-primary;
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-link-active-bg: transparent;
+$navbar-inverse-border: transparent;
+
+$navbar-collapse-width: 1000px;
+$navbar-scroll-up-height: 90px;
+
+// $dropdown-bg: darken($olive, 5%);
+$dropdown-link-color: $text-color;
+
+$input-border-focus: $light-green;
+
+$label-default-bg: lighten($text-muted, 13%);
+
+$grid-columns: 12;
+$border-radius-base: 4px;
+
+$track-tracker-border-radius: 10px;
+$track-bg: $brand-primary;
+$tracker-width: 4px;
+$tracker-height: 4px;
+$tracker-height-hundred-boolean: false;
+@if $tracker-height-hundred-boolean {$tracker-height: 100%;}
+
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-montserrat: $font-family-sans-serif;
+$icon-font-path: "bootstrap-sass/assets/fonts";
+
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+.tooltip {
+    text-align: center;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    background-color: $tooltip-bg;
+    position: absolute;
+    z-index: 10000;
+    padding: 10px;
+      border-radius: 5px;
+      -webkit-transition: 100ms ease;
+      -moz-transition: 50ms ease;
+      -o-transition: 50ms ease;
+      -ms-transition: 50ms ease;
+      transition: 50ms ease;
+  
+    /* triangle decoration */
+    &:after {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $tooltip-bg;
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -9px;
+      margin-left: -10px;
+    }
+  }
+  
+  .tooltip.top:after {
+    border-top-color: transparent;
+    border-bottom: 10px solid $tooltip-bg;
+    top: -20px;
+    bottom: auto;
+  }
+  
+  .tooltip.left:after {
+    left: 10px;
+    margin: 0;
+  }
+  
+  .tooltip.right:after {
+    right: 10px;
+    left: auto;
+    margin: 0;
+  }
+  
+
+.container{
+  padding: 2.5% 0%;
+  border-bottom: 1px solid rgba($text-muted, 0.5);
+
+  .text-info{
+    color: $brand-info;
+    &:hover{
+      color: $brand-primary;
+    }
+  }
+
+  &:hover{
+    // background-color: rgba($brand-info, 0.25);
+    .toggle-copy{
+      visibility: visible;
+    }
+  }
+
+  .toggle-copy{
+    visibility: hidden;
+  }
+
+  .controls{
+    a{
+      margin-bottom: 15px;
+      display: block;
+      text-decoration: none;
+      font-size: 12px;
+      cursor: pointer;
+
+      &:focus{
+        color: $text-muted;
+      }
+    }
+    .label{
+      padding: .65em 1.1em;
+      border-radius: 0px;
+      display: inline-block;
+      margin-bottom: 15px;
+      font-weight: 300;
+      color: $text-color;
+
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+
+    // @media (max-width: $screen-xs-max) {
+    //   h4,
+    //   a{
+    //     display: inline-block;
+    //     margin: 0px 10px;
+    //   }
+
+    //   h4 {
+    //     margin: 0;
+    //   }
+
+    //   padding: 0;
+    // }
+  }
+}
+
+.font{
+  white-space: pre-line;
+  color: #000;
+  width: 100%;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  word-break: break-all;
+  text-align: right;
+  float: left;
+
+  b, span{
+    border-color: transparent;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    float: right;
+    &.active {
+      color: $brand-primary-darker-5;
+      border-color: $brand-primary-darker-15;
+    }
+  }
+
+  .line{
+    direction: rtl;
+    b, span{
+      float: none;
+      display: inline-block;
+    }
+  }
+
+  b, a{
+    font-weight: 100;
+    padding: 0px 2px;
+    color: #000;
+    &:hover{
+      color: $brand-primary;
+      cursor: help;
+    }
+    &:focus{
+      color: $brand-primary-darker-10;
+      outline: none;
+    }
+  }
+
+  p{
+    display: block;
+    clear: both;
+    text-align: right;
+    direction: rtl;
+    float: right;
+  }
+
+//   @media (max-width: $screen-xs-max) {
+//     font-size: 300%;
+//     line-height: 130%;
+//   }
+}
+
+.translation{
+  h4{
+    color: $light-green;
+    margin-bottom: 5px;
+  }
+
+  h2{
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+}
+
+.word_font{
+  line-height: 150%;
+}
+
+.line{
+  line-height: 150%;
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+}
