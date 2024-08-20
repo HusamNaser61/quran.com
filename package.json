@@ -1,7 +1,7 @@
 {
-  "name": "husam_naser3",
+  "name": "husam_naser5",
   "version": "0.1.0",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -10,13 +10,13 @@
     "axios": "^1.7.4",
     "husam_naser2": "^0.1.0",
     "husam_naser3": "^0.1.0",
+    "husam_naser4": "^0.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "files": [
-    "src",
     "build"
   ],
   "scripts": {
